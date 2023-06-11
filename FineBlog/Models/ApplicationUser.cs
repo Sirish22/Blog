@@ -1,6 +1,13 @@
-﻿namespace FineBlog.Models
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace FineBlog.Models
 {
-    public class ApplicationUser
+    public class ApplicationUser:IdentityUser
     {
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+
+        //relation 
+        public List<Post>? Post { get; set; }
     }
 }
